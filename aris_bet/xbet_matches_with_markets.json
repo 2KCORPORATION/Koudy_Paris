@@ -1,0 +1,575 @@
+{
+  "date": "2026-02-26",
+  "timestamp": "2026-02-26T06:44:33.629Z",
+  "total_matches": 40,
+  "statistics": {
+    "matches_with_1x2_only": 40,
+    "matches_with_multiple_markets": 0,
+    "avg_markets_per_match": 1,
+    "market_types_count": {
+      "1X2": 40
+    }
+  },
+  "matches": [
+    {
+      "index": 0,
+      "home_team": "Crvena Zvezda",
+      "away_team": "Lille OSC",
+      "league": "Ligue Europa de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/118593-uefa-europa-league/307143564-crvena-zvezda-lille-osc",
+      "match_id": "307143564",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 1,
+      "home_team": "Ferencvárosi",
+      "away_team": "Ludogorets 1945",
+      "league": "Ligue Europa de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/118593-uefa-europa-league/307136912-ferencvarosi-ludogorets-1945",
+      "match_id": "307136912",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 2,
+      "home_team": "VfB Stuttgart",
+      "away_team": "Celtic",
+      "league": "Ligue Europa de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/118593-uefa-europa-league/307143572-vfb-stuttgart-celtic",
+      "match_id": "307143572",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 3,
+      "home_team": "Viktoria Plzen",
+      "away_team": "Panathinaikos",
+      "league": "Ligue Europa de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/118593-uefa-europa-league/307136914-viktoria-plzen-panathinaikos",
+      "match_id": "307136914",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 4,
+      "home_team": "Bologna1909",
+      "away_team": "Brann",
+      "league": "Ligue Europa de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/118593-uefa-europa-league/307143566-bologna-1909-brann",
+      "match_id": "307143566",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 5,
+      "home_team": "Celta de Vigo",
+      "away_team": "P.A.O.K.",
+      "league": "Ligue Europa de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/118593-uefa-europa-league/307143568-celta-paok",
+      "match_id": "307143568",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 6,
+      "home_team": "Genk",
+      "away_team": "Dinamo Zagreb",
+      "league": "Ligue Europa de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/118593-uefa-europa-league/307120098-genk-dinamo-zagreb",
+      "match_id": "307120098",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 7,
+      "home_team": "Nottingham Forest",
+      "away_team": "Fenerbahçe SK",
+      "league": "Ligue Europa de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/118593-uefa-europa-league/307120100-nottingham-forest-fenerbahce",
+      "match_id": "307120100",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 8,
+      "home_team": "à domicile",
+      "away_team": "à l'extérieur",
+      "league": "Ligue Europa de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/118593-uefa-europa-league/307289506-home-away",
+      "match_id": "307289506",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 9,
+      "home_team": "Domicile (Paris spéciaux)",
+      "away_team": "Extérieur (Paris spéciaux)",
+      "league": "Ligue Europa de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/118593-uefa-europa-league/307289632-home-special-bets-away-special-bets",
+      "match_id": "307289632",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 10,
+      "home_team": "Domicile (Paris spéciaux)",
+      "away_team": "Extérieur (Paris spéciaux)",
+      "league": "Ligue Europa de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/118593-uefa-europa-league/307153044-home-special-bets-away-special-bets",
+      "match_id": "307153044",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 11,
+      "home_team": "Celje",
+      "away_team": "KF Drita",
+      "league": "Ligue Conférence de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/2252762-uefa-conference-league/307137764-celje-kf-drita",
+      "match_id": "307137764",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 12,
+      "home_team": "Fiorentina",
+      "away_team": "Jagiellonia Białystok",
+      "league": "Ligue Conférence de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/2252762-uefa-conference-league/307144232-fiorentina-jagiellonia-bialystok",
+      "match_id": "307144232",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 13,
+      "home_team": "Rijeka",
+      "away_team": "AC Omonia",
+      "league": "Ligue Conférence de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/2252762-uefa-conference-league/307144218-rijeka-ac-omonia",
+      "match_id": "307144218",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 14,
+      "home_team": "Samsunspor",
+      "away_team": "Skendija",
+      "league": "Ligue Conférence de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/2252762-uefa-conference-league/307137766-samsunspor-skendija",
+      "match_id": "307137766",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 15,
+      "home_team": "AZ Alkmaar",
+      "away_team": "Noah Yerevan",
+      "league": "Ligue Conférence de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/2252762-uefa-conference-league/307144224-az-alkmaar-noah-yerevan",
+      "match_id": "307144224",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 16,
+      "home_team": "Crystal Palace",
+      "away_team": "HSK Zrinjski Mostar",
+      "league": "Ligue Conférence de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/2252762-uefa-conference-league/307144226-crystal-palace-zrinjski",
+      "match_id": "307144226",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 17,
+      "home_team": "Lausanne-Sport",
+      "away_team": "Sigma Olomouc",
+      "league": "Ligue Conférence de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/2252762-uefa-conference-league/307144216-lausanne-sport-sigma-olomouc",
+      "match_id": "307144216",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 18,
+      "home_team": "Lech Poznan",
+      "away_team": "Kuopion Palloseura",
+      "league": "Ligue Conférence de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/2252762-uefa-conference-league/307144220-lech-poznan-kuopion-palloseura",
+      "match_id": "307144220",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 19,
+      "home_team": "à domicile",
+      "away_team": "à l'extérieur",
+      "league": "Ligue Conférence de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/2252762-uefa-conference-league/307289724-home-away",
+      "match_id": "307289724",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 20,
+      "home_team": "Domicile (Paris spéciaux)",
+      "away_team": "Extérieur (Paris spéciaux)",
+      "league": "Ligue Conférence de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/2252762-uefa-conference-league/307289780-home-special-bets-away-special-bets",
+      "match_id": "307289780",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 21,
+      "home_team": "Domicile (Paris spéciaux)",
+      "away_team": "Extérieur (Paris spéciaux)",
+      "league": "Ligue Conférence de l'UEFA",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/2252762-uefa-conference-league/307153050-home-special-bets-away-special-bets",
+      "match_id": "307153050",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 22,
+      "home_team": "Coastal Spirit",
+      "away_team": "Nomads United",
+      "league": "Matchs amicaux des clubs",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/67559-club-friendlies/308558690-coastal-spirit-nomads-united",
+      "match_id": "308558690",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 23,
+      "home_team": "Bukovyna Chernivtsi",
+      "away_team": "SK Vilkhivtsi",
+      "league": "Matchs amicaux des clubs",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/67559-club-friendlies/308911236-bukovyna-chernivtsi-sk-vilkhivtsi",
+      "match_id": "308911236",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 24,
+      "home_team": "Nyva Ternopil",
+      "away_team": "Metalurh Zaporizhya",
+      "league": "Matchs amicaux des clubs",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/67559-club-friendlies/308918966-nyva-ternopil-metalurh-zaporizhya",
+      "match_id": "308918966",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 25,
+      "home_team": "Stabaek",
+      "away_team": "Sandefjord",
+      "league": "Matchs amicaux des clubs",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/67559-club-friendlies/308890902-stabaek-sandefjord",
+      "match_id": "308890902",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 26,
+      "home_team": "Asane",
+      "away_team": "Idrettslaget Bjarg",
+      "league": "Matchs amicaux des clubs",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/67559-club-friendlies/308905988-asane-idrettslaget-bjarg",
+      "match_id": "308905988",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 27,
+      "home_team": "Austria Lustenau",
+      "away_team": "VfB Hohenems",
+      "league": "Matchs amicaux des clubs",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/67559-club-friendlies/308858016-austria-lustenau-vfb-hohenems",
+      "match_id": "308858016",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 28,
+      "home_team": "Vítkovice",
+      "away_team": "Vratimov",
+      "league": "Matchs amicaux des clubs",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/67559-club-friendlies/309042720-vtkovice-vratimov",
+      "match_id": "309042720",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 29,
+      "home_team": "Trinité-et-Tobago U20",
+      "away_team": "Barbade U20",
+      "league": "CONCACAF U20",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/80495-concacaf-u20/308863238-trinidad-and-tobago-u20-barbados-u20",
+      "match_id": "308863238",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 30,
+      "home_team": "Bahir Dar Kenema (Femmes)",
+      "away_team": "Ethio Electric (Femmes)",
+      "league": "Championnat d'Éthiopie. Premier League. Femmes",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/2493422-ethiopia-premier-league-women/308665304-bahir-dar-kenema-women-ethio-electric-women",
+      "match_id": "308665304",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 31,
+      "home_team": "Planning Boys United",
+      "away_team": "New Road",
+      "league": "Championnat du Népal",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/1771962-nepal-championship/309055304-planning-boys-united-new-road",
+      "match_id": "309055304",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 32,
+      "home_team": "Khelaghar Samaj Kalyan Samiti",
+      "away_team": "Chattogram City",
+      "league": "Championnat du Bangladesh. Ligue 2",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/1362177-bangladesh-ligue-2/308991010-khelaghar-samaj-kalyan-samiti-chattogram-city",
+      "match_id": "308991010",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 33,
+      "home_team": "City Club Dhaka",
+      "away_team": "Abahani Limited Chittagong",
+      "league": "Championnat du Bangladesh. Ligue 2",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/1362177-bangladesh-ligue-2/308991008-city-club-dhaka-abahani-limited-chittagong",
+      "match_id": "308991008",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 34,
+      "home_team": "Dagon Port",
+      "away_team": "Yarmanya United",
+      "league": "Birmanie. Première Ligue",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/181251-myanmar-premier-league/307721158-dagon-port-yarmanya-united",
+      "match_id": "307721158",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 35,
+      "home_team": "Thitsar Arman",
+      "away_team": "Ayeyawady United",
+      "league": "Birmanie. Première Ligue",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/181251-myanmar-premier-league/307721156-thitsar-arman-ayeyawady-united",
+      "match_id": "307721156",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 36,
+      "home_team": "Sofapaka",
+      "away_team": "Kenya Police",
+      "league": "Championnat du Kenya. Première Ligue",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/1174103-kenya-premier-league/308732418-sofapaka-kenya-police",
+      "match_id": "308732418",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 37,
+      "home_team": "Club Olimpia II",
+      "away_team": "Club LibertadII",
+      "league": "Championnat du Paraguay. Ligue de réserve",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/43721-paraguay-reserve-league/308941790-club-olimpia-ii-club-libertad-ii",
+      "match_id": "308941790",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 38,
+      "home_team": "Deportivo Recoleta II",
+      "away_team": "Club Nacional II",
+      "league": "Championnat du Paraguay. Ligue de réserve",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/43721-paraguay-reserve-league/308928756-deportivo-recoleta-ii-club-nacional-ii",
+      "match_id": "308928756",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    },
+    {
+      "index": 39,
+      "home_team": "Sportivo Ameliano II",
+      "away_team": "Cerro Porteño II",
+      "league": "Championnat du Paraguay. Ligue de réserve",
+      "date": "",
+      "odds_1x2": {},
+      "match_url": "https://1xlite-96866.pro/fr/line/football/43721-paraguay-reserve-league/308941316-sportivo-ameliano-ii-cerro-porteno-ii",
+      "match_id": "308941316",
+      "available_markets": [
+        "1X2"
+      ],
+      "market_count": 1
+    }
+  ]
+}
