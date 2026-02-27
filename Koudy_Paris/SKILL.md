@@ -1168,6 +1168,113 @@ if (fs.existsSync(cookiesPath)) {
 
 ---
 
+## 15. Envoi des Coupons aux APIs Externes
+
+> ⚠️ **Ces APIs sont en ENVOI UNIQUEMENT. On ne reçoit rien, on ne lit rien. On envoie, c'est tout.**
+
+Après chaque placement réussi sur 1xBet (code coupon obtenu), Koudy doit envoyer vers **deux destinations** :
+
+---
+
+### 1. appfootia.com — Publication du coupon
+
+**URL :** `https://appfootia.com/tipster/public/add-cupon-api`
+**Méthode :** `GET` avec query params
+**Paramètres :**
+- `code` = le code coupon 1xBet (ex: `ABC12345`)
+- `cote` = la cote totale du coupon (arrondie à 2 décimales, ex: `4.35`)
+
+**Exemple :**
+```
+GET https://appfootia.com/tipster/public/add-cupon-api?code=ABC12345&cote=4.35
+```
+
+**Règle importante :** N'envoyer **que si la cote totale >= 2.0**. En dessous, ignorer.
+
+**Implémentation dans le code :**
+```javascript
+const FOOTIA_API_URL = 'https://appfootia.com/tipster/public/add-cupon-api';
+
+if (totalOdds >= 2.0) {
+    const apiUrl = `${FOOTIA_API_URL}?code=${encodeURIComponent(couponCode)}&cote=${parseFloat(totalOdds.toFixed(2))}`;
+    const response = await fetch(apiUrl, { method: 'GET' });
+    if (response.ok) {
+        console.log(`✅ Coupon envoyé à appfootia.com`);
+        // Marquer comme envoyé: placement.sent_to_footia = true
+    }
+}
+```
+
+**En cas d'échec :** Le script `sync_placements_to_footia.js` permet de renvoyer les coupons non envoyés (flag `sent_to_footia: false` dans le fichier `data/placements/YYYY-MM-DD.json`).
+
+---
+
+### 2. api.appbetai.com — Enregistrement du placement
+
+**URL :** `https://api.appbetai.com/api/admin/coupons`
+**Méthode :** `POST` avec JSON body
+**Authentification :** Header `X-API-Key: vkjuhriouhgrljherihenokhbreoiughggpiub_BAI`
+
+**Body JSON envoyé :**
+```json
+{
+  "date": "2026-02-27",
+  "coupon_name": "Coupon Sûr 1",
+  "code": "ABC12345",
+  "strategy": "safe",
+  "total_odds": 4.35,
+  "start_time": "2026-02-27T10:30:00.000Z",
+  "end_time": "2026-02-27T12:30:00.000Z",
+  "events": [
+    {
+      "home_team": "PSG",
+      "away_team": "Monaco",
+      "bet_type": "1X2",
+      "bet_value": "1",
+      "home_team_logo": "https://...",
+      "away_team_logo": "https://...",
+      "match_time": "2026-02-27T20:00:00.000Z"
+    }
+  ]
+}
+```
+
+**Implémentation dans le code :**
+```javascript
+async function sendPlacementToAPI(placementData) {
+    const response = await fetch('https://api.appbetai.com/api/admin/coupons', {
+        method: 'POST',
+        headers: {
+            'X-API-Key': 'vkjuhriouhgrljherihenokhbreoiughggpiub_BAI',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(placementData)
+    });
+    // Pas de lecture de retour nécessaire
+}
+```
+
+**Note :** api.appbetai.com est aussi utilisé en **source de données** pour récupérer les fixtures avec prédictions IA (`GET /api/admin/fixtures?api_key=...`). Mais pour les coupons, c'est uniquement un envoi POST.
+
+---
+
+### Ordre d'envoi après placement
+
+```
+1. Placer les paris sur 1xBet → obtenir le code coupon
+2. Sauvegarder dans data/placements/YYYY-MM-DD.json
+3. Envoyer à appfootia.com (GET, si cote >= 2.0)
+4. Envoyer à api.appbetai.com (POST)
+5. Marquer sent_to_footia = true dans le fichier placements
+```
+
+### En cas d'erreur d'envoi
+- Ne pas bloquer le workflow → continuer avec le coupon suivant
+- Logger l'erreur (`[API] Erreur: ...`)
+- Les coupons non envoyés à footia peuvent être synchronisés via : `node sync_placements_to_footia.js`
+
+---
+
 ## 🔴 RAPPELS PERMANENTS
 
 0. **RECHERCHE WEB OBLIGATOIRE** — Minimum 6 sites via `web_search` (Brave) avant tout coupon. Forme, blessures, pronostics, H2H. Sans recherche = pas de coupon.
