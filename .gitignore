@@ -1,0 +1,4 @@
+.pi/
+.openclaw/
+node_modules/
+*.env
