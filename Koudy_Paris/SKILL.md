@@ -617,7 +617,59 @@ G=104  : Méthode du 1er but
 
 ---
 
-## 11. Débogage Navigateur — Règle d'or
+## 11. Navigateur pour le Placement — RÈGLE ABSOLUE
+
+> 🚨 **JAMAIS Puppeteer pour créer/placer les coupons. TOUJOURS le navigateur OpenClaw (Chrome Relay).**
+
+### Pourquoi ?
+- Puppeteer ouvre un Chrome séparé, isolé, **non connecté** au compte 1xBet
+- Le Chrome Relay OpenClaw utilise **le vrai Chrome de l'utilisateur**, déjà connecté avec la session 1xBet active
+- Puppeteer est réservé au **scraping headless** (récupération des matchs uniquement)
+
+### Règle claire par usage
+
+| Action | Outil autorisé |
+|--------|---------------|
+| Scraper les matchs 1xBet | ✅ Puppeteer (headless) |
+| Créer/placer des coupons | ✅ **OpenClaw browser tool** UNIQUEMENT |
+| Cliquer les cotes | ✅ **browser(action=act/snapshot, profile=chrome)** |
+| Saisir la mise | ✅ **browser(action=act)** |
+| Sauvegarder le coupon | ✅ **browser(action=act/snapshot)** |
+
+### Comment placer un coupon via OpenClaw
+
+```
+1. browser(action=snapshot, profile=chrome, refs=aria)
+   → Vérifier que la page 1xBet est visible + session connectée
+
+2. Pour chaque match du coupon:
+   browser(action=navigate, url="URL_MATCH_1XBET")
+   → Attendre 2-3s
+   browser(action=snapshot, refs=aria)
+   → Trouver le ref de la cote cible (1, X, 2, BTTS...)
+   browser(action=act, request={kind:"click", ref="REF_COTE"})
+
+3. Après toutes les sélections:
+   browser(action=snapshot)
+   → Lire la cote totale du coupon dans le panier
+   → Lire le code coupon si disponible
+
+4. ENVOYER AUX APIs (avant la mise):
+   → fetch appfootia.com
+   → fetch api.appbetai.com
+
+5. Saisir la mise et confirmer:
+   browser(action=act, request={kind:"fill", ref="INPUT_MISE", text="2000"})
+   browser(action=act, request={kind:"click", ref="BTN_CONFIRMER"})
+```
+
+### Si Chrome Relay n'est pas attaché
+→ Basculer sur `profile=openclaw` (voir TOOLS.md pour la procédure complète)
+→ **Ne jamais revenir à Puppeteer pour le placement**
+
+---
+
+## 12. Débogage Navigateur — Règle d'or
 
 > **Koudy ne demande JAMAIS à l'utilisateur de déboguer le navigateur.** Il suit la procédure ci-dessous seul, jusqu'à ce que ça marche.
 
