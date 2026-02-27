@@ -499,6 +499,31 @@ const codeMatch = bodyText.match(/(?:code\s*(?:coupon)?\s*[:#-]?\s*)([A-Z0-9]{6,
 
 > 🔎 **Rappel** : Ces règles s'appliquent APRÈS la recherche web (Étape 2.5). Ne jamais sélectionner un match sans avoir vérifié la forme, les blessures et les pronostics via Brave Search.
 
+### 🚫 RÈGLE ABSOLUE SUR LES COTES
+
+> **Ne JAMAIS sélectionner une cote inférieure à 1.5.**
+
+- Cote ≥ 1.5 → ✅ eligible
+- Cote < 1.5 → ❌ **rejetée, peu importe la confiance**
+
+**Pourquoi ?** Une cote < 1.5 signifie que le bookmaker considère l'issue quasi-certaine. Mais :
+- Le risque reste réel (upsets arrivent)
+- Le gain potentiel ne justifie pas le risque
+- Sur un combiné, une cote à 1.22 plafonne tout le reste
+- Koudy ne parie que sur des valeurs, pas sur des "certitudes" mal rémunérées
+
+**En pratique :**
+- Dynamo Kyiv à 1.26 → ❌ exclure, chercher un autre match
+- Chakhtar à 1.22 → ❌ exclure, chercher un autre match
+- Aston Villa à 1.55 → ✅ acceptable
+- Parma à 2.00 → ✅ bon
+
+**Alternative si le match est bon mais la cote trop basse :**
+→ Passer sur le marché **Double Chance (1X ou X2)** qui offre souvent des cotes > 1.5
+→ Ou **Over 1.5 buts** si le match est offensif
+
+---
+
 ### ✅ Matchs à PRIVILÉGIER
 - Grandes ligues européennes (Premier League, Champions League, La Liga, Bundesliga, Serie A, Ligue 1)
 - Matchs avec favori clair (une cote ≤ 2.0)
