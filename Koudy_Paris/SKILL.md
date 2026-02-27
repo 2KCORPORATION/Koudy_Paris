@@ -12,8 +12,9 @@
 4. [Prérequis & Installation](#4-prérequis--installation)
 5. [Étape 1 — Récupérer les Matchs](#5-étape-1--récupérer-les-matchs)
 6. [Étape 2 — Scraper les Marchés](#6-étape-2--scraper-les-marchés)
-7. [Étape 3 — Créer un Coupon](#7-étape-3--créer-un-coupon)
-8. [Étape 4 — Placer le Coupon](#8-étape-4--placer-le-coupon)
+7. [**Étape 2.5 — Recherche Web OBLIGATOIRE (Brave Search)**](#7-étape-25--recherche-web-obligatoire-avant-tout-coupon)
+8. [Étape 3 — Créer un Coupon](#8-étape-3--créer-un-coupon)
+9. [Étape 4 — Placer le Coupon](#9-étape-4--placer-le-coupon)
 9. [Règles de Sélection des Matchs](#9-règles-de-sélection-des-matchs)
 10. [Marchés Disponibles & Leur Logique](#10-marchés-disponibles--leur-logique)
 11. [Erreurs Connues & Solutions](#11-erreurs-connues--solutions)
@@ -253,7 +254,97 @@ await scraper.close();
 
 ---
 
-## 7. Étape 3 — Créer un Coupon
+## 7. Étape 2.5 — Recherche Web (OBLIGATOIRE avant tout coupon)
+
+> ⚠️ **Cette étape est non négociable. Koudy ne construit JAMAIS un coupon sans avoir fait ses recherches.**
+
+Avant de sélectionner les matchs, Koudy doit utiliser l'outil **`web_search` (Brave Search API)** pour collecter des infos fraîches sur chaque match potentiel.
+
+### Objectif
+Ne pas se fier uniquement aux cotes de 1xBet. Les cotes reflètent l'opinion du bookmaker, pas la réalité du terrain. Koudy doit **croiser les sources** pour détecter :
+- Joueurs blessés ou suspendus
+- Équipes en forme / en crise
+- Historique des confrontations directes
+- Pronostics des sites spécialisés
+- Compositions d'équipes probables
+
+### Protocole de Recherche
+
+Pour **chaque match** envisagé dans le coupon, lancer **au minimum 2 recherches web** :
+
+```
+1. "[Équipe A] vs [Équipe B] prédiction [date]"
+2. "[Équipe A] blessures absences [date]"
+3. "[Équipe B] forme derniers matchs"
+```
+
+**Total minimum : 6 requêtes web** pour un coupon de 4 matchs (certains matchs partagent des recherches).
+
+### Sources à Consulter (minimum 6 sites différents)
+
+| Type de source | Sites recommandés |
+|---------------|-------------------|
+| **Pronostics** | forebet.com, betexplorer.com, soccerway.com, footystats.org |
+| **Stats & forme** | fbref.com, sofascore.com, flashscore.com, whoscored.com |
+| **Blessures/compos** | transfermarkt.com, l'équipe.fr, bbc sport, skysports.com |
+| **Head-to-head** | 11v11.com, soccerhistory.net |
+| **Pronostics FR** | pronostics-en-or.com, butfootballclub.fr |
+
+### Ce que Koudy cherche
+
+Pour chaque match, extraire :
+
+```
+✅ Forme récente (5 derniers matchs): W-D-L-W-W ?
+✅ Blessés / Suspendus (joueurs clés absents ?)
+✅ Confrontations directes: qui domine historiquement ?
+✅ Motivation du match (début de saison? finale? relégation?)
+✅ Terrain (domicile fort ou non?)
+✅ Score moyen des matchs (équipes offensives ou défensives?)
+✅ Pronostic des sites spécialisés (consensus ou divergences?)
+```
+
+### Exemple de Recherche en Pratique
+
+Pour un match **PSG vs Marseille** :
+
+```
+Recherche 1: "PSG Marseille prediction 2026"
+Recherche 2: "PSG blessures absences février 2026"
+Recherche 3: "Marseille form derniers matchs 2026"
+Recherche 4: "PSG Marseille head to head stats"
+```
+
+Après lecture des résultats → Koudy décide :
+- PSG à domicile, favori clair, Mbappé présent → **Paris: PSG gagne @ 1.55** ✅
+- Si Mbappé blessé → passer à **Double Chance 1X @ 1.20** (moins de confiance)
+
+### Grille de Décision post-recherche
+
+```
+Score de confiance par sélection (sur 5) :
+
+5/5 → Mise normale (inclure dans le coupon)
+3-4/5 → Inclure mais choisir marché plus sûr (Double Chance, DNB)
+1-2/5 → EXCLURE ce match du coupon
+```
+
+**Si un match tombe à 1-2/5 → le remplacer par un autre match bien recherché.**
+
+### Résumé obligatoire avant coupon
+
+Avant de présenter le coupon final, Koudy doit afficher un **tableau de synthèse** :
+
+```
+| Match | Source | Forme DOM | Forme EXT | Blessés clés | Prono | Confiance |
+|-------|--------|-----------|-----------|--------------|-------|-----------|
+| PSG-OM | forebet+sofascore | W W W D W | L D W W L | Neymar(out) | PSG 1 | 4/5 |
+| ...   | ...    | ...       | ...       | ...          | ...   | ...  |
+```
+
+---
+
+## 8. Étape 3 — Créer un Coupon
 
 ### Principe de Construction
 
@@ -406,6 +497,8 @@ const codeMatch = bodyText.match(/(?:code\s*(?:coupon)?\s*[:#-]?\s*)([A-Z0-9]{6,
 
 ## 9. Règles de Sélection des Matchs
 
+> 🔎 **Rappel** : Ces règles s'appliquent APRÈS la recherche web (Étape 2.5). Ne jamais sélectionner un match sans avoir vérifié la forme, les blessures et les pronostics via Brave Search.
+
 ### ✅ Matchs à PRIVILÉGIER
 - Grandes ligues européennes (Premier League, Champions League, La Liga, Bundesliga, Serie A, Ligue 1)
 - Matchs avec favori clair (une cote ≤ 2.0)
@@ -524,7 +617,40 @@ G=104  : Méthode du 1er but
 
 ---
 
-## 11. Erreurs Connues & Solutions
+## 11. Débogage Navigateur — Règle d'or
+
+> **Koudy ne demande JAMAIS à l'utilisateur de déboguer le navigateur.** Il suit la procédure ci-dessous seul, jusqu'à ce que ça marche.
+
+### Priorité des profils
+1. `profile=openclaw` → **toujours en premier** pour 1xBet (autonome)
+2. `profile=chrome` → seulement si l'utilisateur a **explicitement** activé le Browser Relay (badge ON)
+
+### Séquence d'auto-correction (dans l'ordre)
+```
+1. browser(status, openclaw)
+   → Non démarré ? → browser(start, openclaw)
+
+2. browser(open, openclaw, url="https://1xlite-96866.pro/fr/")
+   → Attendre 4-6s
+
+3. browser(snapshot, openclaw, refs=aria)
+   → Page vide ou erreur ? → openclaw gateway restart → reprendre depuis 1
+
+4. Si gateway restart ne suffit pas :
+   → exec: pkill -f "openclaw gateway" && sleep 3 && openclaw gateway start
+   → Attendre 5s → reprendre depuis 1
+```
+
+### Jamais acceptables
+- ❌ "Pouvez-vous ouvrir le navigateur ?"
+- ❌ "Activez le relay et réessayez."
+- ❌ Abandonner après une seule erreur navigateur.
+
+**→ Consulter TOOLS.md pour l'arbre de décision complet.**
+
+---
+
+## 12. Erreurs Connues & Solutions
 
 ### ❌ Erreur 1 : `waitForSelector timeout`
 **Message** :
@@ -1044,6 +1170,7 @@ if (fs.existsSync(cookiesPath)) {
 
 ## 🔴 RAPPELS PERMANENTS
 
+0. **RECHERCHE WEB OBLIGATOIRE** — Minimum 6 sites via `web_search` (Brave) avant tout coupon. Forme, blessures, pronostics, H2H. Sans recherche = pas de coupon.
 1. **Compte DÉMO** — Aucun argent réel n'est risqué pour l'instant
 2. **Credentials dans `.pi/1xbet.env`** — Ne JAMAIS les mettre dans les scripts
 3. **Vérifier le solde** avant chaque coupon (via l'interface 1xBet)
