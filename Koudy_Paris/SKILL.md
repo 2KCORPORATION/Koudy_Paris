@@ -499,7 +499,27 @@ const codeMatch = bodyText.match(/(?:code\s*(?:coupon)?\s*[:#-]?\s*)([A-Z0-9]{6,
 
 > 🔎 **Rappel** : Ces règles s'appliquent APRÈS la recherche web (Étape 2.5). Ne jamais sélectionner un match sans avoir vérifié la forme, les blessures et les pronostics via Brave Search.
 
-### 🚫 RÈGLE ABSOLUE SUR LES COTES
+### 🏆 RÈGLE D'OR — COTE TOTALE DU COMBINÉ
+
+> **La cote totale d'un coupon combiné doit être comprise entre 2.5 et 10.**
+
+- Cote totale < 2.5 → ❌ **trop faible, pas rentable** — ajouter un match ou choisir des cotes plus hautes
+- Cote totale entre 2.5 et 10 → ✅ **zone cible**
+- Cote totale > 10 → ❌ **trop risqué** — retirer un match ou baisser les cotes
+
+**En pratique :**
+- 3 matchs × 1.8 × 1.7 × 1.6 = 4.90 ✅
+- 2 matchs × 1.55 × 1.50 = 2.33 ❌ (< 2.5 → ajouter une sélection)
+- 4 matchs × 2.5 × 2.0 × 1.8 × 1.6 = 14.4 ❌ (> 10 → retirer un match)
+
+**Comment atteindre la zone 2.5–10 :**
+- Préférer 3-4 matchs avec des cotes entre 1.5 et 2.5 chacun
+- Éviter de multiplier les cotes faibles (1.5 × 1.5 × 1.5 = 3.4 → ok mais limite)
+- Éviter de multiplier des cotes élevées (2.5 × 2.5 × 2.0 = 12.5 → trop haut)
+
+---
+
+### 🚫 RÈGLE ABSOLUE SUR LES COTES INDIVIDUELLES
 
 > **Ne JAMAIS sélectionner une cote inférieure à 1.5.**
 
