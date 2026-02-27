@@ -1258,15 +1258,27 @@ async function sendPlacementToAPI(placementData) {
 
 ---
 
-### Ordre d'envoi après placement
+### Ordre d'envoi — WORKFLOW EXACT
+
+> ⚠️ **Les coupons sont envoyés aux deux sites AVANT de miser l'argent.**
+> On publie d'abord, on mise ensuite. Jamais l'inverse.
 
 ```
-1. Placer les paris sur 1xBet → obtenir le code coupon
-2. Sauvegarder dans data/placements/YYYY-MM-DD.json
-3. Envoyer à appfootia.com (GET, si cote >= 2.0)
-4. Envoyer à api.appbetai.com (POST)
+1. Construire le coupon sur 1xBet (sélections ajoutées au panier)
+2. Sauvegarder le coupon sur 1xBet → obtenir le CODE coupon
+3. ──── ENVOI AUX APIS (AVANT la mise) ────
+   3a. Envoyer à appfootia.com (GET, si cote >= 2.0)
+   3b. Envoyer à api.appbetai.com (POST)
+4. Sauvegarder dans data/placements/YYYY-MM-DD.json
 5. Marquer sent_to_footia = true dans le fichier placements
+6. ──── MISER L'ARGENT (après publication) ────
+   → Confirmer la mise sur 1xBet
 ```
+
+**Pourquoi cet ordre ?**
+- Le code coupon est généré dès la sauvegarde, sans avoir encore misé
+- On publie le coupon (pour les abonnés/visiteurs) avant d'engager les fonds
+- Si l'envoi API échoue → ne pas bloquer la mise, logger et rattraper via `sync_placements_to_footia.js`
 
 ### En cas d'erreur d'envoi
 - Ne pas bloquer le workflow → continuer avec le coupon suivant
