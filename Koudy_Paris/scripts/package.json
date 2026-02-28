@@ -1,16 +1,14 @@
 {
-  "name": "aris_bet",
-  "version": "1.0.0",
-  "description": "",
-  "main": "auto_place.js",
+  "name": "koudy-paris-scripts",
+  "version": "2.0.0",
+  "description": "Scripts de placement automatique de coupons 1xBet → Footia & BetAI",
+  "main": "run_daily.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node run_daily.js",
+    "daily": "node run_daily.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "puppeteer-core": "^24.37.5"
+    "node-fetch": "^2.7.0",
+    "puppeteer-core": "^21.0.0"
   }
 }
